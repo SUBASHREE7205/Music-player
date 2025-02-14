@@ -1,0 +1,148 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white; /* Default text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00, #00bcd4); /* Multi-color gradient */
+    transition: background 0.5s ease-in-out; /* Smooth transition for background change */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; /* Animate gradient */
+}
+
+/* Keyframes to animate the gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Player container */
+.player-container {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Title and artist */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h3, h5 {
+    margin: 5px;
+    font-size: 1.2rem;
+    color: #eee;
+}
+
+/* Song cover image */
+#cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+/* Progress bar */
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #ddd;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    border-radius: 5px;
+    background: #ff5722;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ff5722;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="range"]:focus {
+    background-color: #ff5722;
+}
+
+/* Controls container */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Control buttons */
+button {
+    background-color: transparent;
+    border: 2px solid #ff5722;
+    color: #ff5722;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+button i {
+    font-size: 1.5rem;
+}
+
+/* Volume control */
+#volume {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Additional styling for song controls */
+button:active {
+    transform: scale(0.95); /* Button press effect */
+}
+
+/* Transition for the whole player when song changes */
+.player-container {
+    transition: transform 0.3s ease;
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 400px) {
+    .player-container {
+        width: 280px;
+        padding: 20px;
+    }
+
+    #cover {
+        width: 180px;
+        height: 180px;
+    }
+}

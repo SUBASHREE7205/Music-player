@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <h2>🎵 Music Player</h2>
+        <div class="player">
+            <img id="cover" src="cover1.jpg" alt="Album Cover">
+            <h3 id="song-title">Song Title</h3>
+            <h5 id="artist">Artist Name</h5>
+            <audio id="audio" src="song1.mp3"></audio>
+            <input type="range" id="progress" value="0">
+            
+            <div class="controls">
+                <button id="shuffle"><i>🔀</i></button>
+                <button id="prev"><i>⏮</i></button>
+                <button id="play"><i>▶️</i></button>
+                <button id="next"><i>⏭</i></button>
+                <button id="loop"><i>🔁</i></button>
+            </div>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
